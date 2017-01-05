@@ -69,6 +69,7 @@ export default Component.extend({
 
   placeChanged() {
     let place =  this.get('autocomplete').getPlace();
+    debugger;
     this._callCallback('placeChangedCallback', place);
     this.set('value', place.formatted_address);
   },
