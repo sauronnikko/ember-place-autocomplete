@@ -59,8 +59,9 @@ export default Component.extend({
   getAutocomplete() {
     if(isEmpty(this.get('autocomplete'))){
       if(document && window){
-        let inputElement = document.getElementById(this.elementId).getElementsByTagName('input')[0],
         debugger;
+        let inputElement = document.getElementById(this.elementId).getElementsByTagName('input')[0],
+
             google = this.get('google') || window.google, //TODO: check how to use the inyected google object
             autocomplete = new google.maps.places.Autocomplete(inputElement, { types: this._typesToArray(), componentRestrictions: this.get('restrictions') });
             debugger;
